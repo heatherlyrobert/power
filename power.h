@@ -21,8 +21,8 @@
 
 
 /* rapidly evolving version number to aid with visual change confirmation     */
-#define     YFONT_VER_NUM   "2.0a"
-#define     YFONT_VER_TXT   "adapted (and simplified) with the new yCOLOR library"
+#define     YFONT_VER_NUM   "2.0b"
+#define     YFONT_VER_TXT   "moved to REDBLU color scheme in yCOLOR library"
 
 
 

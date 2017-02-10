@@ -87,7 +87,7 @@ DRAW_main          (void)
    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
    glLoadIdentity();
    /*---(draw status background)---------*/
-   yCOLOR_deg2color (my.level * 10);
+   yCOLOR_num2color (my.level, 1.0);
    glBegin(GL_POLYGON); {
       glVertex3f   (    0,     0,    z);
       glVertex3f   (  100,     0,    z);
@@ -101,7 +101,7 @@ DRAW_main          (void)
    /*> printf ("win inc    = %4.1f\n", x_inc);                                        <*/
    for (i = 0; i < my.ncolor; ++i) {
       /*> printf ("color index= %3d\n", my.ncolor - i);                                <*/
-      yCOLOR_deg2color (i * 10);
+      yCOLOR_num2color (i, 1.0);
       x_top = (i + 1) * x_inc;
       x_bot = (i    ) * x_inc;
       /*> printf ("x_top      = %4.1f\n", x_top);                                     <*/
@@ -311,7 +311,7 @@ main               (void)
    my.updates  = 0;
    my.events   = 0;
    strcpy    (my.face, "clarity");
-   my.ncolor  = yCOLOR_init  (YCOLOR_SMALL);
+   my.ncolor  = yCOLOR_init  (YCOLOR_REDBLU);
    FONT_load    ();
    PROG_event   ();
    FONT_free    ();
